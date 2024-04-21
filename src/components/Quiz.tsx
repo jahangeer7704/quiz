@@ -8,10 +8,10 @@ function Quiz() {
 const router=useRouter()
   const [select,setSelect]=useState({game:"html"})
   const handleClick=(selectedGame:string)=>{
-if(selectedGame!=select.game){
+
   setSelect({game:selectedGame})
   router.push(`/quizzes/${selectedGame}`)
-}
+
   }
   return (
     <div className='h-screen'>
@@ -21,19 +21,19 @@ if(selectedGame!=select.game){
       </h1>
 
 <main className='grid place-content-center  h-[90%] bg-green-50 lg:grid-flow-col'>
-<section className='border-2 border-gray-400 rounded-lg shadow-md flex  flex-col justify-center items-center w-[500px]'>
+<motion.section initial={{y:-1000}} animate={{y:0} } transition={{duration:1 , type:"spring",stiffness:50}} className='border-2 border-gray-400 rounded-lg shadow-md flex  flex-col justify-center items-center w-[500px]'>
 <h2 className='font-serif text-xl font-bold text-center ' style={{
     fontWeight: 'bold',
     background: 'linear-gradient(to right, #1D73F3 21%, #FF985E 100%)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',}}>Select a Game</h2>
-<div className='grid text-white font-bold grid-cols-2 gap-10 p-5'>
+<motion.div  className='grid text-white font-bold grid-cols-2 gap-10 p-5'>
   <button onClick={()=>handleClick("html")} className={`${select.game=="html"?"bg-[#6940aa]":"text-black"} border-2 border-gray-400  p-5 w-[150px] rounded-lg`}>HTML</button>
   <button onClick={()=>handleClick("css")} className={`${select.game=="css"?"bg-[#6940aa]":"text-black"} border-2 border-gray-400  p-5 w-[150px] rounded-lg `}>CSS</button>
   <button onClick={()=>handleClick("java")} className={`${select.game=="java"?"bg-[#6940aa]":"text-black"} border-2 border-gray-400  p-5 w-[150px] rounded-lg`}>JAVA</button>
   <button onClick={()=>handleClick("python")} className={`${select.game=="python"?"bg-[#6940aa]":"text-black"} border-2 border-gray-400  p-5 w-[150px] rounded-lg`}>Python</button>
-</div>
-</section>
+</motion.div>
+</motion.section>
 <section className='w-[500px] flex justify-center  p-4'>
 
 
