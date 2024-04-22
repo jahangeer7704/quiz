@@ -20,7 +20,7 @@ const router=useRouter()
         is joy until it is a Hoy
       </h1>
 
-<main className='grid place-content-center  h-[90%] bg-green-50 lg:grid-flow-col'>
+<main className='grid place-content-center  h-[90%]  lg:grid-flow-col'>
 <motion.section initial={{y:-1000}} animate={{y:0} } transition={{duration:1 , type:"spring",stiffness:50}} className='border-2 border-gray-400 rounded-lg shadow-md flex  flex-col justify-center items-center w-[500px]'>
 <h2 className='font-serif text-xl font-bold text-center ' style={{
     fontWeight: 'bold',

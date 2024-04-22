@@ -21,7 +21,7 @@ function Home() {
     router.push("/interface");
   }
   return (
-    <main className="bg-[#dcdcdc] h-screen ">
+    <main className=" h-screen ">
       <motion.h1 initial={{y:-500}} animate={{y:0}} transition={{duration:.5 , type:"tween"}} className=" first-letter:text-6xl font-bold first-letter:text-[#6940aa] text-3xl font-serif text-center pt-10">
         Tech Savvy Museum
       </motion.h1>

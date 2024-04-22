@@ -9,21 +9,7 @@ function page() {
   });
   const router = useRouter();
 
-  useEffect(() => {
-    const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowRight") {
-        setSelect({ interface: "game" });
-      } else if (e.key === "ArrowLeft") {
-        setSelect({ interface: "quiz" });
-      } else if (e.key === "Enter") {
-        console.log("jking", select.interface);
-        router.push(`/${select.interface === "game" ? "games" : "quizzes"}`);
-      }
-    };
-  
-    window.addEventListener("keyup", handleKey);
-    return () => window.removeEventListener("keyup", handleKey);
-  }, [select]);
+ 
 const handleRoute=(path:string)=>{
     router.push(`/${path}`);
 

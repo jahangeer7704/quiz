@@ -11,7 +11,7 @@ function page({ params }: { params: { quiz: string } }) {
 
   const [data, setData] = useState(gameTemplate[quiz]);
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-100 to-gray-300">
+    <div className="h-screen flex flex-col justify-center items-center ">
       <div className="shadow-md rounded-lg  w-[500px] bg-white p-10">
         <div className="text-center">
           <h1 className={`text-6xl font-bold `} style={{ color: data.color }}>
